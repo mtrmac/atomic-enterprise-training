@@ -344,11 +344,10 @@ On the **master** node perform the following operations
 
 If you want default routes (we'll talk about these later) to automatically get
 the right domain (the one you configured earlier with your wildcard DNS), then
-you should edit `/etc/sysconfig/atomic-enterprise-master` and add the following:
+you should edit `/etc/openshift/master/master-config.yaml` and add the following:
 
-[//]: # (TODO: OPENSHIFT_ROUTE_SUBDOMAIN -> ???)
-
-    OPENSHIFT_ROUTE_SUBDOMAIN=cloudapps.example.com
+    routingConfig:
+      subdomain: cloudapps.example.com
 
 Or modify it appropriately for your domain.
 
